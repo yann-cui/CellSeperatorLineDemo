@@ -15,6 +15,8 @@
 		87DFAADD1EAC62C30003677F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DFAADB1EAC62C30003677F /* LaunchScreen.storyboard */; };
 		87DFAAE81EAC62C40003677F /* CellSeperatorLine_demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFAAE71EAC62C40003677F /* CellSeperatorLine_demoTests.m */; };
 		87DFAAF31EAC62C40003677F /* CellSeperatorLine_demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFAAF21EAC62C40003677F /* CellSeperatorLine_demoUITests.m */; };
+		87DFAB021EAC67D20003677F /* BaseCell+Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFAB011EAC67D20003677F /* BaseCell+Line.m */; };
+		87DFAB051EAC6DFA0003677F /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFAB041EAC6DFA0003677F /* BaseCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 		87DFAAEE1EAC62C40003677F /* CellSeperatorLine_demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CellSeperatorLine_demoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DFAAF21EAC62C40003677F /* CellSeperatorLine_demoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellSeperatorLine_demoUITests.m; sourceTree = "<group>"; };
 		87DFAAF41EAC62C40003677F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87DFAB001EAC67D20003677F /* BaseCell+Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseCell+Line.h"; sourceTree = "<group>"; };
+		87DFAB011EAC67D20003677F /* BaseCell+Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseCell+Line.m"; sourceTree = "<group>"; };
+		87DFAB031EAC6DFA0003677F /* BaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCell.h; sourceTree = "<group>"; };
+		87DFAB041EAC6DFA0003677F /* BaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCell.m; sourceTree = "<group>"; };
+		87DFAB061EAC6E620003677F /* CellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +108,7 @@
 		87DFAACC1EAC62C30003677F /* CellSeperatorLine_demo */ = {
 			isa = PBXGroup;
 			children = (
+				87DFAB071EAC6EAB0003677F /* cell */,
 				87DFAAD01EAC62C30003677F /* AppDelegate.h */,
 				87DFAAD11EAC62C30003677F /* AppDelegate.m */,
 				87DFAAD31EAC62C30003677F /* ViewController.h */,
@@ -138,6 +146,18 @@
 				87DFAAF41EAC62C40003677F /* Info.plist */,
 			);
 			path = CellSeperatorLine_demoUITests;
+			sourceTree = "<group>";
+		};
+		87DFAB071EAC6EAB0003677F /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				87DFAB061EAC6E620003677F /* CellProtocol.h */,
+				87DFAB031EAC6DFA0003677F /* BaseCell.h */,
+				87DFAB041EAC6DFA0003677F /* BaseCell.m */,
+				87DFAB001EAC67D20003677F /* BaseCell+Line.h */,
+				87DFAB011EAC67D20003677F /* BaseCell+Line.m */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87DFAB021EAC67D20003677F /* BaseCell+Line.m in Sources */,
 				87DFAAD51EAC62C30003677F /* ViewController.m in Sources */,
+				87DFAB051EAC6DFA0003677F /* BaseCell.m in Sources */,
 				87DFAAD21EAC62C30003677F /* AppDelegate.m in Sources */,
 				87DFAACF1EAC62C30003677F /* main.m in Sources */,
 			);
@@ -507,6 +529,7 @@
 				87DFAAF91EAC62C40003677F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87DFAAFA1EAC62C40003677F /* Build configuration list for PBXNativeTarget "CellSeperatorLine_demoTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +538,7 @@
 				87DFAAFC1EAC62C40003677F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87DFAAFD1EAC62C40003677F /* Build configuration list for PBXNativeTarget "CellSeperatorLine_demoUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +547,7 @@
 				87DFAAFF1EAC62C40003677F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
