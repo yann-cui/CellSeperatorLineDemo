@@ -8,6 +8,7 @@
 
 #import "BaseCell+Line.h"
 #import <objc/runtime.h>
+#import "SeperatorLineView.h"
 
 @implementation BaseCell(Line)
 
@@ -28,24 +29,14 @@
 - (void)customBackgroundView:(UITableView *)tableView separatorInset:(UIEdgeInsets)separatorInset{
     
     UIEdgeInsets inset = separatorInset;
-    {
-        if (!self.backLine) {
-            CGRect frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, self.cellHeight);
-            UIView *line = [[UIView alloc] initWithFrame:(CGRectMake(inset.left,CGRectGetHeight(frame)-1, CGRectGetWidth(frame)-(inset.left+inset.right), 0.5))];
-            line.backgroundColor = [UIColor colorWithRed:231/255. green:231/255. blue:231/255. alpha:1.];
-            [self addSubview:line];
-            [self bringSubviewToFront:line];
-            self.backLine = line;
-        }
-    }
-    {
-        //selectedBackgroundView contentInset = {0,-0.5,0,-0.5}
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, -0.5, [UIScreen mainScreen].bounds.size.width, self.cellHeight + 1)];
-        view.backgroundColor = [UIColor colorWithRed:248/255. green:248/255. blue:248/255. alpha:1.];
-        UIView *line = [[UIView alloc] initWithFrame:(CGRectMake(inset.left,CGRectGetHeight(view.bounds)-1.5, CGRectGetWidth(view.bounds)-(inset.left+inset.right), 0.5))];
+    if (!self.backLine) {
+        CGRect frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, self.cellHeight);
+        CGFloat lineH = .5;
+        SeperatorLineView *line = [[SeperatorLineView alloc] initWithFrame:(CGRectMake(inset.left,CGRectGetHeight(frame)-lineH, CGRectGetWidth(frame)-(inset.left+inset.right), lineH))];
         line.backgroundColor = [UIColor colorWithRed:231/255. green:231/255. blue:231/255. alpha:1.];
-        [view addSubview:line];
-        self.selectedBackgroundView = view;
+        [self addSubview:line];
+        [self bringSubviewToFront:line];
+        self.backLine = line;
     }
 }
 

@@ -42,6 +42,7 @@
 
 - (void)setup{
     self.cellHeight = 44.;
+    self.clipsToBounds = YES;
 }
 
 @end

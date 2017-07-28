@@ -17,6 +17,7 @@
 		87DFAAF31EAC62C40003677F /* CellSeperatorLine_demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFAAF21EAC62C40003677F /* CellSeperatorLine_demoUITests.m */; };
 		87DFAB021EAC67D20003677F /* BaseCell+Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFAB011EAC67D20003677F /* BaseCell+Line.m */; };
 		87DFAB051EAC6DFA0003677F /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFAB041EAC6DFA0003677F /* BaseCell.m */; };
+		B6408EB21F2B2C1300B3B69B /* SeperatorLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6408EB11F2B2C1300B3B69B /* SeperatorLineView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		87DFAB031EAC6DFA0003677F /* BaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCell.h; sourceTree = "<group>"; };
 		87DFAB041EAC6DFA0003677F /* BaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCell.m; sourceTree = "<group>"; };
 		87DFAB061EAC6E620003677F /* CellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellProtocol.h; sourceTree = "<group>"; };
+		B6408EB01F2B2C1300B3B69B /* SeperatorLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeperatorLineView.h; sourceTree = "<group>"; };
+		B6408EB11F2B2C1300B3B69B /* SeperatorLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeperatorLineView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,7 @@
 		87DFAACC1EAC62C30003677F /* CellSeperatorLine_demo */ = {
 			isa = PBXGroup;
 			children = (
+				B6408EAF1F2B2BE400B3B69B /* view */,
 				87DFAB071EAC6EAB0003677F /* cell */,
 				87DFAAD01EAC62C30003677F /* AppDelegate.h */,
 				87DFAAD11EAC62C30003677F /* AppDelegate.m */,
@@ -158,6 +162,15 @@
 				87DFAB011EAC67D20003677F /* BaseCell+Line.m */,
 			);
 			name = cell;
+			sourceTree = "<group>";
+		};
+		B6408EAF1F2B2BE400B3B69B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B6408EB01F2B2C1300B3B69B /* SeperatorLineView.h */,
+				B6408EB11F2B2C1300B3B69B /* SeperatorLineView.m */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6408EB21F2B2C1300B3B69B /* SeperatorLineView.m in Sources */,
 				87DFAB021EAC67D20003677F /* BaseCell+Line.m in Sources */,
 				87DFAAD51EAC62C30003677F /* ViewController.m in Sources */,
 				87DFAB051EAC6DFA0003677F /* BaseCell.m in Sources */,
